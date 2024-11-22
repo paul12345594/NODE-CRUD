@@ -1,0 +1,9 @@
+
+
+GET / => users    === find all users
+POST / => users   === creates a user 
+GET / => users =>  === finds user details
+DELETE / => users => === delete user 
+PATCH / => users => === updates a user 
+
+

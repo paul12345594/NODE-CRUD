@@ -7,3 +7,21 @@ DELETE / => users => === delete user
 PATCH / => users => === updates a user 
 
 
+node -v                 --- To know the version of the JS
+node index.js            ---To Run server on Port http://localhost5000
+npm install --save--dev nodemon     ----To save nodemon
+=>>>>  "devDependencies":{
+    "nodemon": "^2.0.4"
+}
+
+STEP 1 
+"Test": /echo 
+new "start": "nodemon index.js"
+
+
+
+nodemon                 --- Auto
+
+
+
+POSTman   =>   GET convert POST   => BODY click raw => text to JSON  

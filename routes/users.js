@@ -1,10 +1,11 @@
 import express from 'express'
-import { v4 as uuidv4 } from 'uuid';
-uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+import { createUser, getUsers, getUser, deleteUser, updateUser } from '../controllers/users.js';
+//uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 
 const router = express.Router();
 
-const users = [];
+//const users = [];  // FOR ADDING ID AND ETC...
+//let users = []      // FOR DELETING  THE ID 
 /*[
 {
     "firstName": "Paul",
@@ -29,28 +30,21 @@ const users = [];
     ]
 */
 
-
 // all routes in here are starting with (--/--) users
-router.get('/', (req,res) => {
-    console.log(users);
+router.get('/', getUsers);
 
-    res.send(users);
-});
-
-router.post('/', (req, res) => {
-    const user = req.body;
-
-    //const userId = uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
+router.post('/', createUser);
+        //const userId = uuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
     //const userWithId = { ...user, id: uuidv4() }
     //users.push(user); // PUSH METHOD
-    users.push({ ...user, id: uuidv4() });
 
 
-    res.send(`User with the name ${user.firstName} added to the database!`);                 // It send to the client side 
-})
 
+//   /users/2 => re.params    (id:2)
+router.get('/:id', getUser)
+
+router.delete('/:id', deleteUser)
+
+router.patch('/:id', updateUser)
 export default router; 
-
-//30:07
-
 

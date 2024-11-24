@@ -1,4 +1,10 @@
 
+MOCK DATABASE
+
+ADD VALUE TO ARRAY - use push method 
+
+in JSON always use this =====    ("")  DOUBLE QUOTATION 
+
 
 GET / => users    === find all users
 POST / => users   === creates a user 
@@ -25,3 +31,13 @@ nodemon                 --- Auto
 
 
 POSTman   =>   GET convert POST   => BODY click raw => text to JSON  
+
+
+
+
+req.params: Contains route parameters (e.g., /users/:id).
+req.query: Contains query parameters from the URL (e.g., ?search=apple).
+req.body: Contains the body data from a POST or PUT request (usually used with express.json() or express.urlencoded()).
+req.headers: Contains the request headers.
+req.method: The HTTP method (GET, POST, etc.).
+req.url: The full request URL.
